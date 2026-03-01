@@ -2,6 +2,7 @@ let c = document.getElementById("canva");
 let ctx = c.getContext("2d");
 
 const POINT_RAD = 5;
+const LINE_WIDTH = 3;
 
 function point({x, y}) {
     ctx.beginPath();
@@ -11,7 +12,8 @@ function point({x, y}) {
 }
 
 function draw_line(a, b) {
-    ctx.strokeStyle = "rgb(0, 255, 0)"
+    ctx.strokeStyle = "rgb(0, 255, 0)";
+    ctx.lineWidth = LINE_WIDTH;
     ctx.beginPath();
     ctx.moveTo(a.x, a.y);
     ctx.lineTo(b.x, b.y);
