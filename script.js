@@ -161,6 +161,9 @@ function loop(time) {
     if (keys['a']) cam.position.x -= 2 * dt;
     if (keys['d']) cam.position.x += 2 * dt;
 
+    if (keys['i']) cam.position.y += 2 * dt;
+    if (keys['k']) cam.position.y -= 2 * dt;
+
     render(SCENE, cam);
 
     requestAnimationFrame(loop);
